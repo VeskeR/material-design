@@ -85,8 +85,81 @@ $grey: #eee;
               transition: box-shadow .3s;
 
               &.clicked {
-                box-shadow: 0px 1px 5px 2.5px #b8b8b8;
+                box-shadow: 0px 2.5px 5px 2.5px #b8b8b8;
                 transition: .3;
+              }
+            }
+          }
+        }
+
+        .animation {
+          background-color: $grey;
+          position: relative;
+          height: 600px;
+
+          &__block {
+            animation: moveHor 4s ease-in, moveVer 4s ease-out, shadowing 4s;
+            animation-iteration-count: infinite;
+
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            box-shadow: 0px 5px 10px 0px #b8b8b8;
+
+            @keyframes moveHor {
+              0% {
+                left: 25px;
+              }
+              40% {
+                left: calc(100% - 150px);
+              }
+              50% {
+                left: calc(100% - 150px);
+              }
+              90% {
+                left: 25px;
+              }
+              90% {
+                left: 25px;
+              }
+            }
+
+            @keyframes moveVer {
+              0% {
+                top: 25px;
+              }
+              40% {
+                top: 400px;
+              }
+              50% {
+                top: 400px;
+              }
+              90% {
+                top: 25px;
+              }
+              90% {
+                top: 25px;
+              }
+            }
+
+            @keyframes shadowing {
+              0% {
+                box-shadow: 0px 5px 10px 0px #b8b8b8;
+              }
+              40% {
+                box-shadow: 0px 5px 10px 0px #b8b8b8;
+              }
+              50% {
+                box-shadow: 0px 15px 30px 5px #b8b8b8
+              }
+              90% {
+                box-shadow: 0px 15px 30px 5px #b8b8b8
+              }
+              100% {
+                box-shadow: 0px 5px 10px 0px #b8b8b8;
               }
             }
           }
