@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $('.material-button').on('clicl', function () {
-    console.log('hello');
+  $('.buttons > button').on('click', function (e) {
+    $(this).addClass('clicked');
+    setTimeout(function() {
+      $(e.target).removeClass('clicked');
+    }, 300);
   });
 });
