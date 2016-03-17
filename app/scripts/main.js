@@ -1,8 +1,11 @@
 $(document).ready(function() {
-  $('.buttons > button').on('click', function (e) {
+  var buttonTimeout;
+  $('.buttons > button').on('mousedown', function (e) {
+    clearTimeout(buttonTimeout);
+    var button = this;
     $(this).addClass('clicked');
-    setTimeout(function() {
-      $(e.target).removeClass('clicked');
+    buttonTimeout = setTimeout(function() {
+      $(button).removeClass('clicked');
     }, 300);
   });
 
