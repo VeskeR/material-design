@@ -5,9 +5,7 @@ $icon-font-path: '../fonts/';
 // endbower
 
 @import 'reset';
-
-$grey: #eee;
-$dark-grey: #d5d5d5;
+@import 'variables';
 
 .main {
   &__header {
@@ -38,7 +36,7 @@ $dark-grey: #d5d5d5;
             width: 350px;
             height: 350px;
             margin-bottom: 1rem;
-            background-color: $grey;
+            background-color: $grey-1;
 
             &--block {
               position: absolute;
@@ -50,15 +48,15 @@ $dark-grey: #d5d5d5;
               background-color: #fff;
 
               &_key-light {
-                box-shadow: 0px 5px 10px 0px #b8b8b8;
+                box-shadow: $material-shadow-1;
               }
 
               &_ambient-light {
-                box-shadow: 0px 0px 20px -5px #b8b8b8;
+                box-shadow: $material-ambient-shadow-1;
               }
 
               &_key-ambient-light {
-                box-shadow: 0px 0px 20px -10px #b8b8b8, 0px 5px 10px 0px #b8b8b8;
+                box-shadow: $material-shadow-1, $material-ambient-shadow-1;
               }
             }
           }
@@ -70,10 +68,10 @@ $dark-grey: #d5d5d5;
           flex-wrap: wrap;
           justify-content: space-between;
           padding: 2rem 2rem 1rem 2rem;
-          background-color: $grey;
+          background-color: $grey-1;
 
           .material {
-            box-shadow: 0px 1px 5px 0px #b8b8b8;
+            box-shadow: $material-shadow-1;
 
             &-button {
               padding: 20px;
@@ -83,11 +81,11 @@ $dark-grey: #d5d5d5;
               background-color: #fff;
               color: #ff0000;
               font-size: 1.5rem;
-              transition: box-shadow .3s;
+              transition: box-shadow .2s;
 
               &.clicked {
-                box-shadow: 0px 2.5px 5px 2.5px #b8b8b8;
-                transition: .3;
+                box-shadow: $material-shadow-3;
+                transition: .2;
               }
             }
 
@@ -102,7 +100,7 @@ $dark-grey: #d5d5d5;
                 left: 50%;
                 position: absolute;
                 border-radius: 100%;
-                background-color: $dark-grey;
+                background-color: $grey-2;
                 opacity: .7;
                 -webkit-transform: scale(0);
               }
@@ -111,7 +109,7 @@ $dark-grey: #d5d5d5;
         }
 
         .animation {
-          background-color: $grey;
+          background-color: $grey-1;
           position: relative;
           height: 600px;
 
@@ -125,7 +123,7 @@ $dark-grey: #d5d5d5;
             width: 100px;
             height: 100px;
             background-color: #fff;
-            box-shadow: 0px 5px 10px 0px #b8b8b8;
+            box-shadow: $material-shadow-1;
 
             @keyframes moveHor {
               0% {
@@ -165,13 +163,13 @@ $dark-grey: #d5d5d5;
 
             @keyframes shadowing {
               0% {
-                box-shadow: 0px 5px 10px 0px #b8b8b8;
+                box-shadow: $material-shadow-1;
               }
               50% {
-                box-shadow: 0px 20px 30px 7.5px #b8b8b8
+                box-shadow: $material-shadow-5;
               }
               100% {
-                box-shadow: 0px 5px 10px 0px #b8b8b8;
+                box-shadow: $material-shadow-1;
               }
             }
           }
